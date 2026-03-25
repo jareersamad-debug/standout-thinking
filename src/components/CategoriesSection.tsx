@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import voiceAiImg from "@/assets/category-voice-ai.jpg";
 import websiteBuilderImg from "@/assets/category-website-builder.jpg";
 import fitnessImg from "@/assets/category-fitness.jpg";
+import datingImg from "@/assets/category-dating.jpg";
+import foodImg from "@/assets/category-food.jpg";
 
 const categories = [
   {
@@ -22,6 +24,18 @@ const categories = [
     title: "FITNESS",
     description: "Habits people actually care about — not just track",
     image: fitnessImg,
+  },
+  {
+    slug: "dating",
+    title: "DATING",
+    description: "Online matches, brought into the real world",
+    image: datingImg,
+  },
+  {
+    slug: "food",
+    title: "FOOD",
+    description: "Making people see what they'd rather ignore",
+    image: foodImg,
   },
 ];
 

@@ -66,6 +66,46 @@ const categoryData: Record<string, { title: string; drops: Drop[] }> = {
       },
     ],
   },
+  dating: {
+    title: "DATING",
+    drops: [
+      {
+        title: "From Swipe to Street",
+        description: "Dating apps optimized for matches, not meetings. What if the product's job was to get you offline as fast as possible?",
+        bg: "from-[hsl(350,50%,10%)] to-transparent",
+      },
+      {
+        title: "The Anti-Algorithm",
+        description: "Stop optimizing for compatibility scores. Start designing for unexpected chemistry. The best dates are the ones you'd never have picked.",
+        bg: "from-[hsl(30,40%,8%)] to-transparent",
+      },
+      {
+        title: "Shared Experiences > Shared Interests",
+        description: "Instead of matching on bios, match on moments. Concerts, markets, hikes — real context beats curated profiles every time.",
+        bg: "from-[hsl(270,30%,8%)] to-transparent",
+      },
+    ],
+  },
+  food: {
+    title: "FOOD",
+    drops: [
+      {
+        title: "The Uncomfortable Plate",
+        description: "What if food marketing showed what people actually eat — not what they aspire to? Radical honesty as a brand strategy.",
+        bg: "from-[hsl(120,30%,8%)] to-transparent",
+      },
+      {
+        title: "Waste as Spectacle",
+        description: "Turn food waste data into public installations that make ignoring the problem feel impossible. Guilt as a growth lever.",
+        bg: "from-[hsl(45,50%,8%)] to-transparent",
+      },
+      {
+        title: "The Viral Ingredient",
+        description: "Design one element of the food experience to be so visually unexpected, people photograph it before they taste it.",
+        bg: "from-[hsl(0,40%,8%)] to-transparent",
+      },
+    ],
+  },
 };
 
 const CategoryPage = () => {
