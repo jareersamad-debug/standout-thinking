@@ -1,0 +1,54 @@
+import { useParams } from "react-router-dom";
+
+const categoryData: any = {
+  "voice-ai": {
+    title: "VOICE AI",
+    drops: [
+      "/Drops/voice/voice-1.png",
+      "/Drops/voice/voice-2.png",
+      "/Drops/voice/voice-3.png",
+    ],
+  },
+  "ai-website-builder": {
+    title: "AI WEBSITE BUILDER",
+    drops: [
+      "/Drops/builder/builder-1.png",
+      "/Drops/builder/builder-2.png",
+      "/Drops/builder/builder-3.png",
+    ],
+  },
+  "fitness": {
+    title: "FITNESS",
+    drops: [
+      "/Drops/fitness/fitness-1.png",
+      "/Drops/fitness/fitness-2.png",
+      "/Drops/fitness/fitness-3.png",
+    ],
+  },
+  "dating": {
+    title: "DATING",
+    drops: [
+      "/Drops/dating/dating-1.png",
+      "/Drops/dating/dating-2.png",
+      "/Drops/dating/dating-3.png",
+    ],
+  },
+  "food": {
+    title: "FOOD",
+    drops: [
+      "/Drops/food/food-1.png",
+      "/Drops/food/food-2.png",
+      "/Drops/food/food-3.png",
+    ],
+  },
+};
+
+const CategoryPage = () => {
+  return (
+    <div style={{ color: "white", padding: "100px" }}>
+      THIS IS MY PAGE
+    </div>
+  );
+};
+
+export default CategoryPage;

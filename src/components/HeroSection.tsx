@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import jareerPortrait from "@/assets/jareer-portrait.jpg";
+import jareerPhoto from "@/assets/jareer-portrait.png";
 
 const HeroSection = () => {
   return (
     <section className="min-h-screen relative grain flex items-center">
-      <div className="container mx-auto px-6 lg:px-12 py-20">
+      <div className="container mx-auto px-6 lg:px-12 py-3">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Text */}
           <motion.div
@@ -14,12 +14,12 @@ const HeroSection = () => {
             className="space-y-8 relative z-10"
           >
             <div className="font-mono text-xs tracking-[0.15em] uppercase text-muted-foreground">
-              Creative Strategy
+        
             </div>
 
             <div className="space-y-6">
-              <p className="text-lg lg:text-xl leading-relaxed text-foreground/90">
-                I'm <span className="text-primary font-semibold">Jareer Samad</span>, an IIT Madras graduate. Across my time in startups, one question kept coming back:
+              <p className="text-lg lg:text-xl leading-relaxed text-foreground/80">
+                I'm <span className="text-primary font-semibold">Jareer Samad</span>. Across my time in startups, one question kept coming back:
               </p>
 
               <motion.p
@@ -32,8 +32,8 @@ const HeroSection = () => {
                 What does it take to stand out today?
               </motion.p>
 
-              <p className="text-base lg:text-lg leading-relaxed text-muted-foreground">
-                The usual answers — SEO, paid ads, content — felt increasingly repetitive. What once worked is now everywhere. And what's everywhere, gets ignored.
+              <p className="text-base lg:text-lg leading-relaxed text-foreground/80">
+                The usual answers like SEO, paid ads, and content have all started to feel repetitive. What once worked is now everywhere. And what’s everywhere gets ignored.
               </p>
 
               <p className="text-base lg:text-lg leading-relaxed text-foreground/80">
@@ -56,7 +56,7 @@ const HeroSection = () => {
               
               <div className="relative w-[320px] h-[400px] lg:w-[400px] lg:h-[500px] overflow-hidden">
                 <img
-                  src={jareerPortrait}
+                  src={jareerPhoto}
                   alt="Jareer Samad"
                   width={800}
                   height={1024}

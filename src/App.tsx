@@ -4,8 +4,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
-import CategoryPage from "./pages/CategoryPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import CategoryPage from "./pages/CategoryPage";
 
 const queryClient = new QueryClient();
 

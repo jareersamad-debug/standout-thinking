@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import voiceAiImg from "@/assets/category-voice-ai.jpg";
-import websiteBuilderImg from "@/assets/category-website-builder.jpg";
-import fitnessImg from "@/assets/category-fitness.jpg";
-import datingImg from "@/assets/category-dating.jpg";
-import foodImg from "@/assets/category-food.jpg";
+
+import voiceAiImg from "@/assets/Eleven Labs_wb.png";
+import websiteBuilderImg from "@/assets/Lovable_wb.png";
+import fitnessImg from "@/assets/Healthify_wb.png";
+import datingImg from "@/assets/Tinder_wb.png";
+import foodImg from "@/assets/Whole Truth_wb.png";
 
 const categories = [
   {
@@ -45,6 +46,8 @@ const CategoriesSection = () => {
   return (
     <section className="py-28 lg:py-36 relative border-t border-border">
       <div className="container mx-auto px-6 lg:px-12">
+
+        {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -61,6 +64,7 @@ const CategoriesSection = () => {
           </h2>
         </motion.div>
 
+        {/* CATEGORY TILES */}
         <div className="grid md:grid-cols-3 gap-6">
           {categories.map((cat, i) => (
             <motion.div
@@ -68,21 +72,25 @@ const CategoriesSection = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: i * 0.12, duration: 0.7, ease: [0.19, 1, 0.22, 1] }}
+              transition={{
+                delay: i * 0.12,
+                duration: 0.7,
+                ease: [0.19, 1, 0.22, 1],
+              }}
               onClick={() => navigate(`/category/${cat.slug}`)}
-              className="group cursor-pointer bg-card border border-border overflow-hidden hover:border-primary/30 transition-colors"
+              className="group cursor-pointer bg-card border border-border overflow-hidden hover:border-primary/30 transition-all hover:scale-[1.02]"
             >
+              {/* IMAGE */}
               <div className="relative h-52 overflow-hidden">
                 <img
                   src={cat.image}
                   alt={cat.title}
-                  loading="lazy"
-                  width={800}
-                  height={600}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
               </div>
+
+              {/* TEXT */}
               <div className="p-6">
                 <h3 className="font-mono text-sm font-semibold tracking-[0.1em] text-primary mb-2">
                   {cat.title}
@@ -94,6 +102,7 @@ const CategoriesSection = () => {
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );

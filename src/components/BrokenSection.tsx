@@ -4,40 +4,40 @@ const cards = [
   {
     label: "TOO MUCH",
     lines: [
-      "There's more marketing than ever before.",
-      "More ads. More content. More noise.",
+      { text: "There's more marketing than ever before.", bold: true },
+      { text: "More ads. More content. More noise." },
       "",
-      "Costs are rising. Returns are falling.",
-      "CAC goes up. ROI goes down.",
+      { text: "Costs are rising. Returns are falling.", bold: true },
+      { text: "CAC goes up. ROI goes down." },
       "",
-      "Brands compete with everything.",
-      "Not just other brands. But with creators, memes, entertainment.",
+      { text: "Brands compete with everything.", bold: true },
+      { text: "Not just other brands. But with creators, memes, entertainment." },
     ],
   },
   {
     label: "TOO SIMILAR",
     lines: [
-      "AI made content easy to create.",
-      "But it also made dullness scalable.",
+      { text: "AI made content easy to create.", bold: true },
+      { text: "But it also made dullness scalable." },
       "",
-      "Same hooks. Same formats. Same playbooks.",
-      "What worked once is now everywhere.",
+      { text: "Same hooks. Same formats. Same playbooks.", bold: true },
+      { text: "What worked once is now everywhere." },
       "",
-      "Safe, competent marketing is everywhere.",
-      "And that's exactly why it gets ignored.",
+      { text: "Safe, competent marketing is everywhere.", bold: true },
+      { text: "And that's exactly why it gets ignored." },
     ],
   },
   {
     label: "TOO SAFE",
     lines: [
-      "Most marketing isn't designed to stand out.",
-      "It's designed not to fail.",
+      { text: "Most marketing isn't designed to stand out.", bold: true },
+      { text: "It's designed not to fail." },
       "",
-      "No edge. No tension. No personality.",
-      "Just polished, brand-safe content.",
+      { text: "No edge. No tension. No personality.", bold: true },
+      { text: "Just polished, brand-safe content." },
       "",
-      "But people don't share what's safe.",
-      "They share what makes them feel something.",
+      { text: "But people don't share what's safe.", bold: true },
+      { text: "They share what makes them feel something." },
     ],
   },
 ];
@@ -92,19 +92,27 @@ const BrokenSection = () => {
               <div className="font-mono text-sm font-semibold tracking-[0.1em] text-primary mb-6">
                 {card.label}
               </div>
+
               <div className="space-y-1">
-                {card.lines.map((line, j) =>
-                  line === "" ? (
-                    <div key={j} className="h-4" />
-                  ) : (
+                {card.lines.map((line, j) => {
+                  if (line === "") {
+                    return <div key={j} className="h-4" />;
+                  }
+
+                  const text = typeof line === "object" ? line.text : line;
+                  const isBold = typeof line === "object" && line.bold;
+
+                  return (
                     <p
                       key={j}
-                      className="text-sm leading-relaxed text-muted-foreground group-hover:text-foreground/80 transition-colors"
+                      className={`text-sm leading-relaxed text-muted-foreground group-hover:text-foreground/80 transition-colors ${
+                        isBold ? "font-semibold" : ""
+                      }`}
                     >
-                      {line}
+                      {text}
                     </p>
-                  )
-                )}
+                  );
+                })}
               </div>
             </motion.div>
           ))}
