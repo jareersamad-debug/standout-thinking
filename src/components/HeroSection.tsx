@@ -3,8 +3,8 @@ import jareerPhoto from "@/assets/jareer-portrait.png";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen relative grain flex items-center">
-      <div className="container mx-auto px-6 lg:px-12 py-3">
+    <section className="relative grain py-12 lg:py-20 overflow-hidden">
+      <div className="container mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Text */}
           <motion.div
@@ -18,9 +18,14 @@ const HeroSection = () => {
             </div>
 
             <div className="space-y-6">
-              <p className="text-lg lg:text-xl leading-relaxed text-foreground/80">
-                I'm <span className="text-primary font-semibold">Jareer Samad</span>. Across my time in startups, one question kept coming back:
-              </p>
+              <div className="space-y-2">
+                <p className="text-lg lg:text-2xl text-primary font-medium font-mono tracking-wide">
+                  Hey there!
+                </p>
+                <p className="text-lg lg:text-xl leading-relaxed text-white">
+                  I'm <span className="text-primary font-semibold">Jareer Samad</span>.  Across my time in different startups, one question kept bugging me:
+                </p>
+              </div>
 
               <motion.p
                 initial={{ opacity: 0 }}
@@ -32,11 +37,11 @@ const HeroSection = () => {
                 What does it take to stand out today?
               </motion.p>
 
-              <p className="text-base lg:text-lg leading-relaxed text-foreground/80">
+              <p className="text-base lg:text-lg leading-relaxed text-white">
                 The usual answers like SEO, paid ads, and content have all started to feel repetitive. What once worked is now everywhere. And what’s everywhere gets ignored.
               </p>
 
-              <p className="text-base lg:text-lg leading-relaxed text-foreground/80">
+              <p className="text-base lg:text-lg leading-relaxed text-white">
                 That's what got me interested towards a different approach: ideas designed for word of mouth, built to stand out, and rooted in the one thing AI can't still replicate —{" "}
                 <span className="text-primary font-medium border-b border-primary/40">human creativity</span>.
               </p>

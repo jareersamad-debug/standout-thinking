@@ -58,19 +58,19 @@ const cardVariants = {
 
 const BrokenSection = () => {
   return (
-    <section className="py-28 lg:py-36 relative">
+    <section className="py-16 lg:py-24 relative">
       <div className="container mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-12"
         >
           <span className="font-mono text-xs tracking-[0.15em] uppercase text-muted-foreground block mb-4">
             The Problem
           </span>
-          <h2 className="text-4xl lg:text-6xl font-bold text-foreground" style={{ textWrap: "balance" }}>
+          <h2 className="text-5xl lg:text-7xl font-bold text-foreground" style={{ textWrap: "balance" }}>
             What's broken in{" "}
             <span className="text-primary">marketing</span>?
           </h2>
@@ -89,9 +89,10 @@ const BrokenSection = () => {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="bg-card border border-border p-8 group cursor-default transition-colors hover:border-primary/30"
             >
-              <div className="font-mono text-sm font-semibold tracking-[0.1em] text-primary mb-6">
+              <div className="font-mono text-lg font-bold tracking-[0.1em] text-primary mb-4">
                 {card.label}
               </div>
+              <div className="w-full h-px bg-border mb-4 "></div>
 
               <div className="space-y-1">
                 {card.lines.map((line, j) => {
@@ -105,8 +106,8 @@ const BrokenSection = () => {
                   return (
                     <p
                       key={j}
-                      className={`text-sm leading-relaxed text-muted-foreground group-hover:text-foreground/80 transition-colors ${
-                        isBold ? "font-semibold" : ""
+                      className={`text-sm leading-relaxed text-foreground transition-colors ${
+                        isBold ? "font-bold" : ""
                       }`}
                     >
                       {text}

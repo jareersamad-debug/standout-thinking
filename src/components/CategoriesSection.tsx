@@ -1,42 +1,36 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-import voiceAiImg from "@/assets/Eleven Labs_wb.png";
-import websiteBuilderImg from "@/assets/Lovable_wb.png";
-import fitnessImg from "@/assets/Healthify_wb.png";
-import datingImg from "@/assets/Tinder_wb.png";
-import foodImg from "@/assets/Whole Truth_wb.png";
-
 const categories = [
   {
     slug: "voice-ai",
     title: "VOICE AI",
     description: "Turning AI voices into experiences people can't stop sharing",
-    image: voiceAiImg,
+    image: "/Drops/work/voiceAI-tile-image.jpg",
   },
   {
     slug: "ai-website-builder",
     title: "AI WEBSITE BUILDER",
     description: "Build in public. Distribution built-in",
-    image: websiteBuilderImg,
+    image: "/Drops/work/websiteBuilder-tile-image.jpg",
   },
   {
     slug: "fitness",
     title: "FITNESS",
-    description: "Habits people actually care about — not just track",
-    image: fitnessImg,
+    description: "Making fitness a part of everyday life",
+    image: "/Drops/work/Fitness-tile-image.png",
   },
   {
     slug: "dating",
     title: "DATING",
     description: "Online matches, brought into the real world",
-    image: datingImg,
+    image: "/Drops/work/dating-tile-image.jpg",
   },
   {
     slug: "food",
     title: "FOOD",
     description: "Making people see what they'd rather ignore",
-    image: foodImg,
+    image: "/Drops/work/Food-tile-image.jpg",
   },
 ];
 
@@ -44,7 +38,7 @@ const CategoriesSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-28 lg:py-36 relative border-t border-border">
+    <section className="py-16 lg:py-24 relative border-t border-border">
       <div className="container mx-auto px-6 lg:px-12">
 
         {/* HEADER */}
@@ -53,19 +47,19 @@ const CategoriesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-12"
         >
           <span className="font-mono text-xs tracking-[0.15em] uppercase text-muted-foreground block mb-4">
             Work
           </span>
-          <h2 className="text-4xl lg:text-6xl font-bold text-foreground">
+          <h2 className="text-4xl lg:text-7xl font-bold text-foreground">
             My ideas across{" "}
             <span className="text-primary">categories</span>
           </h2>
         </motion.div>
 
         {/* CATEGORY TILES */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.slug}
@@ -92,11 +86,11 @@ const CategoriesSection = () => {
 
               {/* TEXT */}
               <div className="p-6">
-                <h3 className="font-mono text-sm font-semibold tracking-[0.1em] text-primary mb-2">
+                <h3 className="font-mono text-base font-bold tracking-[0.1em] text-primary mb-2">
                   {cat.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {cat.description}
+                <p className="text-sm text-white leading-relaxed">
+                  <span className="font-normal text-white">{cat.description.split(". ")[0]}.</span> {cat.description.split(". ").slice(1).join(". ")}
                 </p>
               </div>
             </motion.div>
